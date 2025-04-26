@@ -46,6 +46,9 @@ class RedirectIfAuthenticated
         if($request->routeIs('admin.*')){
             return route('admin.dashboard');
         }
+        if($request->routeIs('kasir.*')){
+            return route('kasir.dashboard');
+        }
 
 
         return static::$redirectToCallback

@@ -104,6 +104,31 @@
                                     @endif
                                 @endauth
 
+                                @auth('kasir')
+                                    <a
+                                        href="{{ url('/kasir/dashboard') }}"
+                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                                    >
+                                    Kasir Dashboard
+                                    </a>
+                                @else
+                                    <a
+                                        href="{{ route('kasir.login') }}"
+                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                                    >
+                                        Kasir Log in
+                                    </a>
+
+                                    @if (Route::has('kasir.register'))
+                                        <a
+                                            href="{{ route('kasir.register') }}"
+                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                                        >
+                                        Kasir Register
+                                        </a>
+                                    @endif
+                                @endauth
+
 
                             </nav>
                         @endif

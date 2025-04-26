@@ -121,6 +121,9 @@ class Authenticate implements AuthenticatesRequests
         if($request->routeIs('admin.*')){
             return route('admin.login');
         }
+        if($request->routeIs('kasir.*')){
+            return route('kasir.login');
+        }
 
 
         if (static::$redirectToCallback) {

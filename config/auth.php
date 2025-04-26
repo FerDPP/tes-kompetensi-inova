@@ -49,6 +49,10 @@ return [
             'driver' => 'session',
             'provider' => 'teachers',
         ],
+        'kasir' => [
+            'driver' => 'session',
+            'provider' => 'kasirs',
+        ],
 
     ],
 
@@ -81,6 +85,10 @@ return [
         'teachers' => [
             'driver' => 'eloquent',
             'model' => App\Models\Teacher::class,
+        ],
+        'kasirs' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Kasir::class,
         ],
 
         // 'users' => [
